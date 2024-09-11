@@ -13,14 +13,9 @@ class PagesFooter extends Component
      *
      * @return void
      */
-    public $medsos;
-    public $pengaturan;
-
     public function __construct()
     {
-        $this->medsos = Medsos::all();
-
-        $this->pengaturan = Pengaturan::all()->keyBy('key')->toArray();
+        //
     }
 
     /**

@@ -26,9 +26,6 @@
                         <i class="me-50" data-feather="user"></i>Akun
                     </a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="{{ route('pengaturan.index') }}">
-                        <i class="me-50" data-feather="settings"></i>Pengaturan
-                    </a>
                     <a class="dropdown-item" href="{{ route('auth.logout') }}">
                         <i class="me-50" data-feather="power"></i> Keluar
                     </a>

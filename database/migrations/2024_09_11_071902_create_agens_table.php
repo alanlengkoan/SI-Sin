@@ -15,7 +15,7 @@ class CreateAgensTable extends Migration
     {
         Schema::create('agen', function (Blueprint $table) {
             $table->increments('id_agen');
-            $table->integer('id_pelaporan')->nullable();
+            $table->integer('id_pelaporan')->unsigned()->nullable();
             $table->string('nama', 25)->nullable();
             $table->text('alamat')->nullable();
             $table->string('no_hp', 15)->nullable();

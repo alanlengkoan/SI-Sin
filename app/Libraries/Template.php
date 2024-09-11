@@ -14,9 +14,6 @@
 
 namespace App\Libraries;
 
-use App\Models\Medsos;
-use App\Models\Pengaturan;
-
 class Template
 {
     // untuk load view
@@ -33,10 +30,6 @@ class Template
     {
         // untuk judul halaman
         $data['title'] = $title;
-        // untuk medsos
-        $data['medsos'] = Medsos::all();
-        // untuk pengaturan
-        $data['pengaturan'] = Pengaturan::all()->keyBy('key')->toArray();
         
         return view("pages/{$module}/{$view}", $data);
     }

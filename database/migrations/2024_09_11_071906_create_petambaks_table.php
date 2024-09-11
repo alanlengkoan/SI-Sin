@@ -15,7 +15,7 @@ class CreatePetambaksTable extends Migration
     {
         Schema::create('petambak', function (Blueprint $table) {
             $table->increments('id_petambak');
-            $table->integer('id_pelaporan')->nullable();
+            $table->integer('id_pelaporan')->unsigned()->nullable();
             $table->string('nama', 25)->nullable();
             $table->text('alamat')->nullable();
             $table->string('no_hp', 15)->nullable();

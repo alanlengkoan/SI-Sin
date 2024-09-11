@@ -38,77 +38,30 @@
                     <i data-feather="list"></i><span class="menu-title text-truncate">Agama</span>
                 </a>
             </li>
-            <li class="nav-item {{ request()->is('matpel') ? 'active' : ''  }}">
-                <a class="d-flex align-items-center" href="{{ route('matpel.index') }}">
-                    <i data-feather="list"></i><span class="menu-title text-truncate">Matpel</span>
-                </a>
-            </li>
-            <li class="nav-item {{ request()->is('jabatan') ? 'active' : ''  }}">
-                <a class="d-flex align-items-center" href="{{ route('jabatan.index') }}">
-                    <i data-feather="list"></i><span class="menu-title text-truncate">Jabatan</span>
-                </a>
-            </li>
-            <li class="nav-item {{ request()->is('pendidikan') ? 'active' : ''  }}">
-                <a class="d-flex align-items-center" href="{{ route('pendidikan.index') }}">
-                    <i data-feather="list"></i><span class="menu-title text-truncate">Pendidikan</span>
-                </a>
-            </li>
-            <li class="nav-item {{ request()->is('kategori') ? 'active' : ''  }}">
-                <a class="d-flex align-items-center" href="{{ route('kategori.index') }}">
-                    <i data-feather="list"></i><span class="menu-title text-truncate">Kategori</span>
+            <li class="nav-item {{ request()->is('marketing') ? 'active' : ''  }}">
+                <a class="d-flex align-items-center" href="{{ route('marketing.index') }}">
+                    <i data-feather="list"></i><span class="menu-title text-truncate">Marketing</span>
                 </a>
             </li>
             <li class="navigation-header">
-                <span>Fitur</span><i data-feather="more-horizontal"></i>
+                <span>Pustaka</span><i data-feather="more-horizontal"></i>
             </li>
-            <li class="nav-item {{ request()->is('medsos') ? 'active' : ''  }}">
-                <a class="d-flex align-items-center" href="{{ route('medsos.index') }}">
-                    <i data-feather="list"></i><span class="menu-title text-truncate">Medsos</span>
+            <li class="nav-item {{ request()->is('marketing') ? 'active' : ''  }}">
+                <a class="d-flex align-items-center" href="{{ route('marketing.index') }}">
+                    <i data-feather="list"></i><span class="menu-title text-truncate">Pelaporan</span>
                 </a>
             </li>
-            <li class="nav-item {{ request()->is('fasilitas') ? 'active' : ''  }}">
-                <a class="d-flex align-items-center" href="{{ route('fasilitas.index') }}">
-                    <i data-feather="list"></i><span class="menu-title text-truncate">Fasilitas</span>
+            <li class="navigation-header">
+                <span>Data</span><i data-feather="more-horizontal"></i>
+            </li>
+            <li class="nav-item {{ request()->is('marketing') ? 'active' : ''  }}">
+                <a class="d-flex align-items-center" href="{{ route('marketing.index') }}">
+                    <i data-feather="list"></i><span class="menu-title text-truncate">Agen</span>
                 </a>
             </li>
-            <li class="nav-item {{ request()->is('organisasi') ? 'active' : ''  }}">
-                <a class="d-flex align-items-center" href="{{ route('organisasi.index') }}">
-                    <i data-feather="list"></i><span class="menu-title text-truncate">Organisasi</span>
-                </a>
-            </li>
-            <li class="nav-item {{ request()->is('prestasi') ? 'active' : ''  }}">
-                <a class="d-flex align-items-center" href="{{ route('prestasi.index') }}">
-                    <i data-feather="list"></i><span class="menu-title text-truncate">Prestasi</span>
-                </a>
-            </li>
-            <li class="nav-item {{ request()->is('galeri') ? 'active' : ''  }}">
-                <a class="d-flex align-items-center" href="{{ route('galeri.index') }}">
-                    <i data-feather="list"></i><span class="menu-title text-truncate">Galeri</span>
-                </a>
-            </li>
-            <li class="nav-item {{ request()->is('informasi') ? 'active' : ''  }}">
-                <a class="d-flex align-items-center" href="{{ route('informasi.index') }}">
-                    <i data-feather="list"></i><span class="menu-title text-truncate">Informasi</span>
-                </a>
-            </li>
-            <li class="nav-item {{ request()->is('profil') ? 'active' : ''  }}">
-                <a class="d-flex align-items-center" href="{{ route('profil.index') }}">
-                    <i data-feather="list"></i><span class="menu-title text-truncate">Profil</span>
-                </a>
-            </li>
-            <li class="nav-item {{ request()->is('guru') ? 'active' : ''  }}">
-                <a class="d-flex align-items-center" href="{{ route('guru.index') }}">
-                    <i data-feather="list"></i><span class="menu-title text-truncate">Guru</span>
-                </a>
-            </li>
-            <li class="nav-item {{ request()->is('staff') ? 'active' : ''  }}">
-                <a class="d-flex align-items-center" href="{{ route('staff.index') }}">
-                    <i data-feather="list"></i><span class="menu-title text-truncate">Staff</span>
-                </a>
-            </li>
-            <li class="nav-item {{ request()->is('visitor') ? 'active' : ''  }}">
-                <a class="d-flex align-items-center" href="{{ route('visitor.index') }}">
-                    <i data-feather="list"></i><span class="menu-title text-truncate">Visitor</span>
+            <li class="nav-item {{ request()->is('marketing') ? 'active' : ''  }}">
+                <a class="d-flex align-items-center" href="{{ route('marketing.index') }}">
+                    <i data-feather="list"></i><span class="menu-title text-truncate">Petambak</span>
                 </a>
             </li>
         </ul>

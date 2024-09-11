@@ -15,17 +15,9 @@ class PagesNavbar extends Component
      *
      * @return void
      */
-    public $kategori;
-    public $profil;
-    public $medsos;
-    public $pengaturan;
-
     public function __construct()
     {
-        $this->kategori   = Kategori::all();
-        $this->profil     = Profil::all();
-        $this->medsos     = Medsos::all();
-        $this->pengaturan = Pengaturan::all()->keyBy('key')->toArray();
+        //
     }
 
     /**

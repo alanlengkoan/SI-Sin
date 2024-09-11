@@ -15,7 +15,7 @@ class CreatePelaporansTable extends Migration
     {
         Schema::create('pelaporan', function (Blueprint $table) {
             $table->increments('id_pelaporan');
-            $table->integer('id_marketing')->nullable();
+            $table->integer('id_marketing')->unsigned()->nullable();
             $table->date('tgl')->nullable();
             $table->enum('jenis', ['agen', 'petambak'])->nullable();
 

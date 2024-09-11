@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0,minimal-ui">
     <meta name="csrf-token" content="{{ csrf_token() }}" />
-    <meta name="description" content="Sistem Informasi Sekolah {{ config('app.name') }}">
-    <meta name="keywords" content="Sistem Informasi Sekolah {{ config('app.name') }}">
-    <meta name="author" content="Sistem Informasi Sekolah {{ config('app.name') }}">
+    <meta name="description" content="{{ config('app.name') }}">
+    <meta name="keywords" content="{{ config('app.name') }}">
+    <meta name="author" content="{{ config('app.name') }}">
     <title>{{ config('app.name') }} | {{ $title }}</title>
 
     <!-- begin:: icon -->
@@ -19,16 +19,11 @@
     <!-- end:: icon -->
 
     <!-- begin:: css global -->
-    <link href="{{ asset_pages('plugins/bootstrap/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset_pages('plugins/slick/slick.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset_pages('plugins/themify-icons/themify-icons.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset_pages('plugins/animate/animate.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset_pages('plugins/aos/aos.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset_pages('plugins/venobox/venobox.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset_pages('css/style.css') }}" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="{{ asset_pages('css/style.css') }}" />
     <!-- end:: css global -->
 
-    <script type="text/javascript" preload src="{{ asset_pages('plugins/jQuery/jquery.min.js') }}"></script>
 
     <!-- begin:: css local -->
     @stack('css')
@@ -36,27 +31,13 @@
 </head>
 
 <body>
-    <!-- begin:: navbar -->
-    <x-pages-navbar />
-    <!-- end:: navbar -->
-
     <!-- begin:: body -->
     {{ $slot }}
     <!-- end:: body -->
 
-    <!-- begin:: footer -->
-    <x-pages-footer />
-    <!-- end:: footer -->
-
     <!-- begin:: js global -->
-    <script type="text/javascript" src="{{ asset_pages('plugins/bootstrap/bootstrap.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset_pages('plugins/slick/slick.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset_pages('plugins/aos/aos.js') }}"></script>
-    <script type="text/javascript" src="{{ asset_pages('plugins/venobox/venobox.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset_pages('plugins/mixitup/mixitup.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset_pages('plugins/google-map/gmap.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="{{ asset_pages('js/script.js') }}"></script>
-    <script type="text/javascript" src="{{ asset_admin('my_assets/my_fun.js') }}"></script>
     <!-- end:: js global -->
 
     <!-- begin:: js local -->

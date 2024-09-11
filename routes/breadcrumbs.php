@@ -64,99 +64,15 @@ Breadcrumbs::for('akun.index', function (BreadcrumbTrail $trail) {
     $trail->push('Akun', route('akun.index'));
 });
 
-Breadcrumbs::for('pengaturan.index', function (BreadcrumbTrail $trail) {
-    $trail->parent('dashboard.index');
-
-    $trail->push('Pengaturan', route('pengaturan.index'));
-});
-
 Breadcrumbs::for('agama.index', function (BreadcrumbTrail $trail) {
     $trail->parent('dashboard.index');
 
     $trail->push('Agama', route('agama.index'));
 });
 
-Breadcrumbs::for('matpel.index', function (BreadcrumbTrail $trail) {
+Breadcrumbs::for('marketing.index', function (BreadcrumbTrail $trail) {
     $trail->parent('dashboard.index');
 
-    $trail->push('Mata Pelajaran', route('matpel.index'));
-});
-
-Breadcrumbs::for('jabatan.index', function (BreadcrumbTrail $trail) {
-    $trail->parent('dashboard.index');
-
-    $trail->push('Jabatan', route('jabatan.index'));
-});
-
-Breadcrumbs::for('pendidikan.index', function (BreadcrumbTrail $trail) {
-    $trail->parent('dashboard.index');
-
-    $trail->push('Pendidikan', route('pendidikan.index'));
-});
-
-Breadcrumbs::for('kategori.index', function (BreadcrumbTrail $trail) {
-    $trail->parent('dashboard.index');
-
-    $trail->push('Kategori', route('kategori.index'));
-});
-
-Breadcrumbs::for('medsos.index', function (BreadcrumbTrail $trail) {
-    $trail->parent('dashboard.index');
-
-    $trail->push('Media Sosial', route('medsos.index'));
-});
-
-Breadcrumbs::for('fasilitas.index', function (BreadcrumbTrail $trail) {
-    $trail->parent('dashboard.index');
-
-    $trail->push('Fasilitas', route('fasilitas.index'));
-});
-
-Breadcrumbs::for('organisasi.index', function (BreadcrumbTrail $trail) {
-    $trail->parent('dashboard.index');
-
-    $trail->push('Organisasi', route('organisasi.index'));
-});
-
-Breadcrumbs::for('prestasi.index', function (BreadcrumbTrail $trail) {
-    $trail->parent('dashboard.index');
-
-    $trail->push('Prestasi', route('prestasi.index'));
-});
-
-Breadcrumbs::for('galeri.index', function (BreadcrumbTrail $trail) {
-    $trail->parent('dashboard.index');
-
-    $trail->push('Galeri', route('galeri.index'));
-});
-
-Breadcrumbs::for('informasi.index', function (BreadcrumbTrail $trail) {
-    $trail->parent('dashboard.index');
-
-    $trail->push('Informasi', route('informasi.index'));
-});
-
-Breadcrumbs::for('profil.index', function (BreadcrumbTrail $trail) {
-    $trail->parent('dashboard.index');
-
-    $trail->push('Profil', route('profil.index'));
-});
-
-Breadcrumbs::for('guru.index', function (BreadcrumbTrail $trail) {
-    $trail->parent('dashboard.index');
-
-    $trail->push('Guru', route('guru.index'));
-});
-
-Breadcrumbs::for('staff.index', function (BreadcrumbTrail $trail) {
-    $trail->parent('dashboard.index');
-
-    $trail->push('Staff', route('staff.index'));
-});
-
-Breadcrumbs::for('visitor.index', function (BreadcrumbTrail $trail) {
-    $trail->parent('dashboard.index');
-
-    $trail->push('Visitor', route('visitor.index'));
+    $trail->push('Marketing', route('marketing.index'));
 });
 // end:: admin

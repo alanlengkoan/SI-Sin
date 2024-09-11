@@ -4,31 +4,44 @@ namespace App\Http\Controllers\pages;
 
 use App\Http\Controllers\Controller;
 use App\Libraries\Template;
-use App\Models\Guru;
-use App\Models\Kategori;
+use App\Models\Marketing;
 
 class HomeController extends Controller
 {
+    public $marketing;
+
+    public function __construct()
+    {
+        parent::__construct();
+
+        $this->marketing = Marketing::all();
+    }
+
     public function index()
     {
-        $gurus     = Guru::limit(3)->latest()->get();
-        $informasi = Kategori::with(['toInformasi'])->get();
+        return Template::pages('Home', 'home', 'view');
+    }
 
+    public function agen()
+    {
         $data = [
-            'gurus'     => $gurus,
-            'informasi' => $informasi,
+            'marketing' => $this->marketing,
         ];
 
-        return Template::pages('Home', 'home', 'view', $data);
+        return Template::pages('Agen', 'home', 'agen', $data);
     }
 
-    public function kontak()
+    public function petambak()
     {
-        return Template::pages('Kontak', 'home', 'kontak');
+        $data = [
+            'marketing' => $this->marketing,
+        ];
+
+        return Template::pages('Petambak', 'home', 'petambak', $data);
     }
 
-    public function tentang()
+    public function store()
     {
-        return Template::pages('Tentang', 'home', 'tentang');
+        // 
     }
 }
