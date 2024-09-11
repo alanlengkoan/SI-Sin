@@ -17,11 +17,6 @@ class DatabaseSeeder extends Seeder
             PermissionSeeder::class,
             UserTableSeeder::class,
             AgamaTableSeeder::class,
-            MatpelTableSeeder::class,
-            JabatanTableSeeder::class,
-            PendidikanTableSeeder::class,
-            PengaturanSeeder::class,
-            VisitorSeeder::class
         ]);
     }
 }

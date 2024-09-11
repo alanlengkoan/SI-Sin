@@ -29,20 +29,6 @@ class UserTableSeeder extends Seeder
 
         $role->givePermissionTo([
             'agama-read',
-            'matpel-read',
-            'jabatan-read',
-            'pendidikan-read',
-            'kategori-read',
-            'medsos-read',
-            'fasilitas-read',
-            'organisasi-read',
-            'prestasi-read',
-            'galeri-read',
-            'informasi-read',
-            'guru-read',
-            'staff-read',
-            'profil-read',
-            'visitor-read',
         ]);
 
         $user->assignRole('admin');
