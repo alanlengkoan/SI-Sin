@@ -13,9 +13,30 @@ class CreateAgensTable extends Migration
      */
     public function up()
     {
-        Schema::create('agens', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::create('agen', function (Blueprint $table) {
+            $table->increments('id_agen');
+            $table->integer('id_pelaporan')->nullable();
+            $table->string('nama', 25)->nullable();
+            $table->text('alamat')->nullable();
+            $table->string('no_hp', 15)->nullable();
+            $table->enum('metode_pembayaran', ['cash', 'transfer'])->nullable();
+            $table->text('keluhan')->nullable();
+            $table->text('keterangan')->nullable();
+            $table->binary('foto_satu')->nullable();
+            $table->binary('foto_dua')->nullable();
+            $table->binary('foto_tiga')->nullable();
+            $table->binary('foto_empat')->nullable();
+            $table->binary('foto_lima')->nullable();
+            $table->text('target')->nullable();
+            $table->text('market')->nullable();
+            $table->text('jumlah_ton')->nullable();
+            $table->text('brand_kompetitor')->nullable();
+            $table->text('harga_kompetitor')->nullable();
+
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
+
+            $table->foreign('id_pelaporan')->references('id_pelaporan')->on('pelaporan');
         });
     }
 
@@ -26,6 +47,6 @@ class CreateAgensTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('agens');
+        Schema::dropIfExists('agen');
     }
 }

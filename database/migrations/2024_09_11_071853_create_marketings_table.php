@@ -13,9 +13,12 @@ class CreateMarketingsTable extends Migration
      */
     public function up()
     {
-        Schema::create('marketings', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::create('marketing', function (Blueprint $table) {
+            $table->increments('id_marketing');
+            $table->string('nama', 25)->nullable();
+
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
         });
     }
 
@@ -26,6 +29,6 @@ class CreateMarketingsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('marketings');
+        Schema::dropIfExists('marketing');
     }
 }

@@ -13,9 +13,16 @@ class CreatePelaporansTable extends Migration
      */
     public function up()
     {
-        Schema::create('pelaporans', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::create('pelaporan', function (Blueprint $table) {
+            $table->increments('id_pelaporan');
+            $table->integer('id_marketing')->nullable();
+            $table->date('tgl')->nullable();
+            $table->enum('jenis', ['agen', 'petambak'])->nullable();
+
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
+
+            $table->foreign('id_marketing')->references('id_marketing')->on('marketing');
         });
     }
 
@@ -26,6 +33,6 @@ class CreatePelaporansTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pelaporans');
+        Schema::dropIfExists('pelaporan');
     }
 }

@@ -13,9 +13,32 @@ class CreatePetambaksTable extends Migration
      */
     public function up()
     {
-        Schema::create('petambaks', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::create('petambak', function (Blueprint $table) {
+            $table->increments('id_petambak');
+            $table->integer('id_pelaporan')->nullable();
+            $table->string('nama', 25)->nullable();
+            $table->text('alamat')->nullable();
+            $table->string('no_hp', 15)->nullable();
+            $table->enum('metode_pembayaran', ['cash', 'transfer'])->nullable();
+            $table->text('keluhan')->nullable();
+            $table->text('keterangan')->nullable();
+            $table->binary('foto_satu')->nullable();
+            $table->binary('foto_dua')->nullable();
+            $table->binary('foto_tiga')->nullable();
+            $table->binary('foto_empat')->nullable();
+            $table->binary('foto_lima')->nullable();
+            $table->text('komoditi')->nullable();
+            $table->text('jumlah_kolam')->nullable();
+            $table->text('luas')->nullable();
+            $table->text('jumlah_ton')->nullable();
+            $table->text('pakan')->nullable();
+            $table->text('harga_pakan')->nullable();
+            $table->text('jumlah_terpakai')->nullable();
+
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
+
+            $table->foreign('id_pelaporan')->references('id_pelaporan')->on('pelaporan');
         });
     }
 
@@ -26,6 +49,6 @@ class CreatePetambaksTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('petambaks');
+        Schema::dropIfExists('petambak');
     }
 }
