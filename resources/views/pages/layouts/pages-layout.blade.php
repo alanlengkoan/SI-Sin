@@ -21,9 +21,11 @@
     <!-- begin:: css global -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="{{ asset_admin('vendors/css/extensions/sweetalert2.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset_pages('css/style.css') }}" />
     <!-- end:: css global -->
 
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
     <!-- begin:: css local -->
     @stack('css')
@@ -36,7 +38,9 @@
     <!-- end:: body -->
 
     <!-- begin:: js global -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="{{ asset_admin('my_assets/my_fun.js') }}"></script>
+    <script type="text/javascript" src="{{ asset_admin('vendors/js/extensions/sweetalert2.all.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset_pages('js/script.js') }}"></script>
     <!-- end:: js global -->
 

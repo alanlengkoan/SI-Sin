@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\pages;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\PelaporanRequest;
 use App\Libraries\Template;
 use App\Models\Marketing;
 
@@ -40,8 +41,8 @@ class HomeController extends Controller
         return Template::pages('Petambak', 'home', 'petambak', $data);
     }
 
-    public function store()
+    public function store(PelaporanRequest $request)
     {
-        // 
+        dd('berhasil!', $request->all());
     }
 }

@@ -74,6 +74,6 @@ Route::middleware('guest', 'visitor', 'set.locale')->group(function () {
     Route::get('/', [HomeController::class, 'index'])->name('home');
     Route::get('/agen', [HomeController::class, 'agen'])->name('agen');
     Route::get('/petambak', [HomeController::class, 'petambak'])->name('petambak');
-    Route::get('/store', [HomeController::class, 'store'])->name('store');
+    Route::post('/store', [HomeController::class, 'store'])->name('store');
     // end:: no auth
 });
