@@ -34,7 +34,7 @@ class PelaporanRequest extends FormRequest
         $rules['keluhan']           = 'required';
         $rules['keterangan']        = 'required';
 
-        if ($this->post->tipe === 'agen') {
+        if ($this->post->jenis === 'agen') {
             $rules['target']           = 'required';
             $rules['market']           = 'required';
             $rules['jumlah_ton']       = 'required';
@@ -67,7 +67,7 @@ class PelaporanRequest extends FormRequest
         $messages['keluhan.required']           = 'Keluhan harus diisi!';
         $messages['keterangan.required']        = 'Keterangan harus diisi!';
 
-        if ($this->post->tipe === 'agen') {
+        if ($this->post->jenis === 'agen') {
             $messages['target.required']           = 'Target harus diisi!';
             $messages['market.required']           = 'Market harus diisi!';
             $messages['jumlah_ton.required']       = 'Jumlah ton harus diisi!';

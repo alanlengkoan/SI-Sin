@@ -18,4 +18,13 @@ class Pelaporan extends Model
         'tgl',
         'jenis',
     ];
+
+    // relasi tabel
+    protected $with = ['toMarketing'];
+
+    // relasi ke tabel marketing
+    public function toMarketing()
+    {
+        return $this->belongsTo(Marketing::class, 'id_marketing', 'id_marketing');
+    }
 }

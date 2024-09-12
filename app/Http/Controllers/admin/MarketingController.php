@@ -15,8 +15,6 @@ class MarketingController extends Controller
     public function __construct()
     {
         parent::__construct();
-        // for checking permission
-        // $this->middleware('permission:agama-read', ['only' => ['index']]);
     }
 
     public function index()

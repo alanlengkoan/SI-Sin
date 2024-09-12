@@ -14,6 +14,7 @@
                     </div>
                     <div class="card-body">
                         <form id="form-petambak" action="{{ route('store') }}" method="post">
+                            <input type="text" name="jenis" value="petambak" hidden />
                             <div class="mb-3 field-input">
                                 <label for="id_marketing" class="form-label">Marketing</label>
                                 <select class="form-select" id="id_marketing" name="id_marketing">
@@ -99,7 +100,7 @@
 
                             <div class="mb-3 field-input">
                                 <label for="foto_satu" class="form-label">Foto tambak satu</label>
-                                <input type="file" class="form-control" id="foto_satu" name="foto_satu"/>
+                                <input type="file" class="form-control" id="foto_satu" name="foto_satu" />
                                 <span class="invalid-feedback"></span>
                             </div>
                             <div class="mb-3 field-input">

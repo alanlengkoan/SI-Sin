@@ -14,7 +14,7 @@
                     </div>
                     <div class="card-body">
                         <form id="form-agen" action="{{ route('store') }}" method="post">
-                            <input type="text" name="tipe" value="agen" hidden />
+                            <input type="text" name="jenis" value="agen" hidden />
                             <div class="mb-3 field-input">
                                 <label for="id_marketing" class="form-label">Marketing</label>
                                 <select class="form-select" id="id_marketing" name="id_marketing">

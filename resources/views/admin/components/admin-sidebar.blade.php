@@ -4,10 +4,7 @@
             <!-- begin:: brand -->
             <li class="nav-item me-auto">
                 <a class="navbar-brand" href="#">
-                    <span class="brand-logo">
-                        <img src="{{ asset_admin('images/logo/logo.png') }}" alt="logo">
-                    </span>
-                    <h2 class="brand-text">SEKOLAH</h2>
+                    <h2 class="brand-text">CRM</h2>
                 </a>
             </li>
             <li class="nav-item nav-toggle" style="color: #000;">
@@ -26,41 +23,36 @@
                 <span>Dashboard</span><i data-feather="more-horizontal"></i>
             </li>
             <li class="nav-item {{ request()->is('dashboard') ? 'active' : ''  }}">
-                <a class="d-flex align-items-center" href="{{ route('dashboard.index') }}">
+                <a class="d-flex align-items-center" href="{{ route('admin.dashboard.index') }}">
                     <i data-feather="home"></i><span class="menu-title text-truncate">Dashboard</span>
                 </a>
             </li>
             <li class="navigation-header">
                 <span>Master</span><i data-feather="more-horizontal"></i>
             </li>
-            <li class="nav-item {{ request()->is('agama') ? 'active' : ''  }}">
-                <a class="d-flex align-items-center" href="{{ route('agama.index') }}">
-                    <i data-feather="list"></i><span class="menu-title text-truncate">Agama</span>
-                </a>
-            </li>
             <li class="nav-item {{ request()->is('marketing') ? 'active' : ''  }}">
-                <a class="d-flex align-items-center" href="{{ route('marketing.index') }}">
+                <a class="d-flex align-items-center" href="{{ route('admin.marketing.index') }}">
                     <i data-feather="list"></i><span class="menu-title text-truncate">Marketing</span>
                 </a>
             </li>
             <li class="navigation-header">
                 <span>Pustaka</span><i data-feather="more-horizontal"></i>
             </li>
-            <li class="nav-item {{ request()->is('marketing') ? 'active' : ''  }}">
-                <a class="d-flex align-items-center" href="{{ route('marketing.index') }}">
+            <li class="nav-item {{ request()->is('pelaporan') ? 'active' : ''  }}">
+                <a class="d-flex align-items-center" href="{{ route('admin.pelaporan.index') }}">
                     <i data-feather="list"></i><span class="menu-title text-truncate">Pelaporan</span>
                 </a>
             </li>
             <li class="navigation-header">
                 <span>Data</span><i data-feather="more-horizontal"></i>
             </li>
-            <li class="nav-item {{ request()->is('marketing') ? 'active' : ''  }}">
-                <a class="d-flex align-items-center" href="{{ route('marketing.index') }}">
+            <li class="nav-item {{ request()->is('agen') ? 'active' : ''  }}">
+                <a class="d-flex align-items-center" href="{{ route('admin.agen.index') }}">
                     <i data-feather="list"></i><span class="menu-title text-truncate">Agen</span>
                 </a>
             </li>
-            <li class="nav-item {{ request()->is('marketing') ? 'active' : ''  }}">
-                <a class="d-flex align-items-center" href="{{ route('marketing.index') }}">
+            <li class="nav-item {{ request()->is('petambak') ? 'active' : ''  }}">
+                <a class="d-flex align-items-center" href="{{ route('admin.petambak.index') }}">
                     <i data-feather="list"></i><span class="menu-title text-truncate">Petambak</span>
                 </a>
             </li>
