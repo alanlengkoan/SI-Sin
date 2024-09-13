@@ -63,7 +63,7 @@ form .select2.is-valid+.select2-container--default .select2-selection--single {
 
 /* table */
 .table thead th {
-    background-color: #AFD3E2 !important;
+    background-color: #fdf4d7 !important;
     border-color: #fff;
     color: white;
 }
@@ -80,7 +80,7 @@ form .select2.is-valid+.select2-container--default .select2-selection--single {
     margin-left: auto;
     border: 16px solid #f3f3f3;
     border-radius: 50%;
-    border-top: 16px solid #AFD3E2;
+    border-top: 16px solid #fdf4d7;
     width: 90px;
     height: 90px;
     -webkit-animation: spin 2s linear infinite;

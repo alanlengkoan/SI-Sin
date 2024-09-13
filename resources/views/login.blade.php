@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0,minimal-ui">
     <meta name="csrf-token" content="{{ csrf_token() }}" />
-    <meta name="description" content="Sistem Informasi Sekolah {{ config('app.name') }}">
-    <meta name="keywords" content="Sistem Informasi Sekolah {{ config('app.name') }}">
-    <meta name="author" content="Sistem Informasi Sekolah {{ config('app.name') }}">
+    <meta name="description" content="{{ config('app.name') }}">
+    <meta name="keywords" content="{{ config('app.name') }}">
+    <meta name="author" content="{{ config('app.name') }}">
     <title>{{ config('app.name') }} | Dinas Pendidikan</title>
 
     <!-- begin:: icon -->
@@ -48,12 +48,12 @@
                 <div class="auth-wrapper auth-v2">
                     <div class="auth-inner row m-0">
                         <!-- begin:: left text -->
-                        <div class="d-none d-lg-flex col-lg-8 align-items-center p-5" style="background-color: #AFD3E2;">
+                        <div class="d-none d-lg-flex col-lg-8 align-items-center p-5" style="background-color: #fdf4d7;">
                             <div class="w-50 d-lg-flex align-items-center justify-content-center px-1">
-                                <img class="img-fluid" src="{{ asset_admin('images/logo/pu.png') }}" alt="Login" />
+                                <img class="img-fluid" src="{{ asset_admin('images/logo/logo.png') }}" alt="Login" />
                             </div>
                             <h1 class="fw-bolder" style="color: black;">
-                                Selamat Datang <br /> di Sistem Informasi Sekolah
+                                Selamat Datang <br /> di Sistem Informasi
                             </h1>
                         </div>
                         <!-- end:: left text -->
