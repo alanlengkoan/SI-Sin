@@ -22,7 +22,7 @@
             <li class="navigation-header">
                 <span>Dashboard</span><i data-feather="more-horizontal"></i>
             </li>
-            <li class="nav-item {{ request()->is('dashboard') ? 'active' : ''  }}">
+            <li class="nav-item {{ request()->is('admin/dashboard') ? 'active' : ''  }}">
                 <a class="d-flex align-items-center" href="{{ route('admin.dashboard.index') }}">
                     <i data-feather="home"></i><span class="menu-title text-truncate">Dashboard</span>
                 </a>
@@ -30,7 +30,7 @@
             <li class="navigation-header">
                 <span>Master</span><i data-feather="more-horizontal"></i>
             </li>
-            <li class="nav-item {{ request()->is('marketing') ? 'active' : ''  }}">
+            <li class="nav-item {{ request()->is('admin/marketing') ? 'active' : ''  }}">
                 <a class="d-flex align-items-center" href="{{ route('admin.marketing.index') }}">
                     <i data-feather="list"></i><span class="menu-title text-truncate">Marketing</span>
                 </a>
@@ -38,7 +38,7 @@
             <li class="navigation-header">
                 <span>Pustaka</span><i data-feather="more-horizontal"></i>
             </li>
-            <li class="nav-item {{ request()->is('pelaporan') ? 'active' : ''  }}">
+            <li class="nav-item {{ request()->is('admin/pelaporan') ? 'active' : ''  }}">
                 <a class="d-flex align-items-center" href="{{ route('admin.pelaporan.index') }}">
                     <i data-feather="list"></i><span class="menu-title text-truncate">Pelaporan</span>
                 </a>
@@ -46,12 +46,12 @@
             <li class="navigation-header">
                 <span>Data</span><i data-feather="more-horizontal"></i>
             </li>
-            <li class="nav-item {{ request()->is('agen') ? 'active' : ''  }}">
+            <li class="nav-item {{ request()->is('admin/agen') ? 'active' : ''  }}">
                 <a class="d-flex align-items-center" href="{{ route('admin.agen.index') }}">
                     <i data-feather="list"></i><span class="menu-title text-truncate">Agen</span>
                 </a>
             </li>
-            <li class="nav-item {{ request()->is('petambak') ? 'active' : ''  }}">
+            <li class="nav-item {{ request()->is('admin/petambak') ? 'active' : ''  }}">
                 <a class="d-flex align-items-center" href="{{ route('admin.petambak.index') }}">
                     <i data-feather="list"></i><span class="menu-title text-truncate">Petambak</span>
                 </a>
