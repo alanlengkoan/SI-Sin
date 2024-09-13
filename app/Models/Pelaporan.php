@@ -27,4 +27,16 @@ class Pelaporan extends Model
     {
         return $this->belongsTo(Marketing::class, 'id_marketing', 'id_marketing');
     }
+
+    // relasi ke tabel agen
+    public function toAgen()
+    {
+        return $this->belongsTo(Agen::class, 'id_pelaporan', 'id_pelaporan');
+    }
+
+    // relasi ke tabel petambak
+    public function toPetambak()
+    {
+        return $this->belongsTo(Petambak::class, 'id_pelaporan', 'id_pelaporan');
+    }
 }

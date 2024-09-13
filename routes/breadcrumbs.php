@@ -26,6 +26,12 @@ Breadcrumbs::for('admin.pelaporan.index', function (BreadcrumbTrail $trail) {
     $trail->push('Pelaporan', route('admin.pelaporan.index'));
 });
 
+Breadcrumbs::for('admin.pelaporan.det', function (BreadcrumbTrail $trail) {
+    $trail->parent('admin.pelaporan.index');
+
+    $trail->push('Detail', '#');
+});
+
 Breadcrumbs::for('admin.agen.index', function (BreadcrumbTrail $trail) {
     $trail->parent('admin.dashboard.index');
 

@@ -52,13 +52,18 @@ class HomeController extends Controller
 
         DB::beginTransaction();
         try {
-            // $gambar = add_picture($request->gambar, 'informasi/');
 
             $pelaporan              = new Pelaporan();
             $pelaporan->id_marketing = $request->id_marketing;
             $pelaporan->tgl          = date('Y-m-d');
             $pelaporan->jenis        = $request->jenis;
             $pelaporan->save();
+
+            $foto_satu  = add_picture($request->foto_satu, 'pelaporan/');
+            $foto_dua   = add_picture($request->foto_dua, 'pelaporan/');
+            $foto_tiga  = add_picture($request->foto_tiga, 'pelaporan/');
+            $foto_empat = add_picture($request->foto_empat, 'pelaporan/');
+            $foto_lima  = add_picture($request->foto_lima, 'pelaporan/');
 
             if ($request->jenis == 'agen') {
                 $agen = new Agen();
@@ -74,6 +79,11 @@ class HomeController extends Controller
                 $agen->jumlah_ton        = $request->jumlah_ton;
                 $agen->brand_kompetitor  = $request->brand_kompetitor;
                 $agen->harga_kompetitor  = $request->harga_kompetitor;
+                $agen->foto_satu         = $foto_satu;
+                $agen->foto_dua          = $foto_dua;
+                $agen->foto_tiga         = $foto_tiga;
+                $agen->foto_empat        = $foto_empat;
+                $agen->foto_lima         = $foto_lima;
                 $agen->save();
             } else {
                 $petambak = new Petambak();
@@ -92,6 +102,11 @@ class HomeController extends Controller
                 $petambak->pakan             = $request->pakan;
                 $petambak->harga_pakan       = $request->harga_pakan;
                 $petambak->jumlah_terpakai   = $request->jumlah_terpakai;
+                $petambak->foto_satu         = $foto_satu;
+                $petambak->foto_dua          = $foto_dua;
+                $petambak->foto_tiga         = $foto_tiga;
+                $petambak->foto_empat        = $foto_empat;
+                $petambak->foto_lima         = $foto_lima;
                 $petambak->save();
             }
 

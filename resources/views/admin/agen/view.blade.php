@@ -94,14 +94,6 @@
                         data: 'keterangan',
                         class: 'text-center'
                     },
-                    {
-                        title: 'Aksi',
-                        data: 'action',
-                        className: 'text-center',
-                        responsivePriority: -1,
-                        orderable: false,
-                        searchable: false,
-                    },
                 ],
             });
         }();

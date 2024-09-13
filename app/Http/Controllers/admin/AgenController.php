@@ -25,12 +25,6 @@ class AgenController extends Controller
 
         return DataTables::of($data)
             ->addIndexColumn()
-            ->addColumn('action', function ($row) {
-                return '
-                    <button type="button" id="upd" data-id="' . my_encrypt($row->id_agen) . '" class="btn btn-sm btn-relief-primary" data-bs-toggle="modal" data-bs-target="#modal-add-upd"><i data-feather="edit"></i>&nbsp;<span>Ubah</span></button>&nbsp;
-                    <button type="button" id="del" data-id="' . my_encrypt($row->id_agen) . '" class="btn btn-sm btn-relief-danger"><i data-feather="trash"></i>&nbsp;<span>Hapus</span></button>
-                ';
-            })
             ->make(true);
     }
 }

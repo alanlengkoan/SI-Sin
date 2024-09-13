@@ -57,6 +57,7 @@ Route::middleware('auth.session', 'prevent.back.history')->prefix('admin')->as('
     // begin:: pelaporan
     Route::controller(PelaporanController::class)->prefix('pelaporan')->as('pelaporan.')->group(function () {
         Route::get('/', 'index')->name('index');
+        Route::get('/det/{id}', 'det')->name('det');
         Route::get('/get_data_dt', 'get_data_dt')->name('get_data_dt');
     });
     // end:: pelaporan

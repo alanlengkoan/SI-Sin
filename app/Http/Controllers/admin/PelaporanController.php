@@ -19,6 +19,19 @@ class PelaporanController extends Controller
         return Template::load('admin', 'Pelaporan', 'pelaporan', 'view');
     }
 
+    public function det($id)
+    {
+        $id = my_decrypt($id);
+
+        $pelaporan = Pelaporan::with(['toAgen', 'toPetambak'])->findOrFail($id);
+
+        $data = [
+            'pelaporan' => $pelaporan
+        ];
+
+        return Template::load('admin', 'Detail', 'pelaporan', 'det', $data);
+    }
+
     public function get_data_dt()
     {
         $data = Pelaporan::latest()->get();
@@ -27,8 +40,7 @@ class PelaporanController extends Controller
             ->addIndexColumn()
             ->addColumn('action', function ($row) {
                 return '
-                    <button type="button" id="upd" data-id="' . my_encrypt($row->id_pelaporan) . '" class="btn btn-sm btn-relief-primary" data-bs-toggle="modal" data-bs-target="#modal-add-upd"><i data-feather="edit"></i>&nbsp;<span>Ubah</span></button>&nbsp;
-                    <button type="button" id="del" data-id="' . my_encrypt($row->id_pelaporan) . '" class="btn btn-sm btn-relief-danger"><i data-feather="trash"></i>&nbsp;<span>Hapus</span></button>
+                    <a href="' . route('admin.pelaporan.det', ['id' => my_encrypt($row->id_pelaporan)]) . '" class="btn btn-sm btn-relief-info"><i data-feather="info"></i>&nbsp;Detail</a>&nbsp;
                 ';
             })
             ->make(true);
