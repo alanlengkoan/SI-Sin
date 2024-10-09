@@ -4,7 +4,7 @@
             <!-- begin:: brand -->
             <li class="nav-item me-auto">
                 <a class="navbar-brand" href="#">
-                    <h2 class="brand-text">CRM</h2>
+                    <h2 class="brand-text">PAKAN CGA</h2>
                 </a>
             </li>
             <li class="nav-item nav-toggle" style="color: #000;">
