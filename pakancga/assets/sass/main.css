@@ -1643,7 +1643,8 @@ h6 {
   }
 }
 .block-title__image {
-  background-image: url(../images/loader.png);
+  /* background-image: url(../images/loader.png); */
+  background-image: url(../images/logo-cga.png);
   background-size: 100%;
   width: 24px;
   height: 25px;
